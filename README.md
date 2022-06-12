@@ -12,4 +12,4 @@ This script includes:
 
 # Previews
 ### Complete interface
-![menu]([https://i.imgur.com/xnHn8uA.png])
+![complete](https://user-images.githubusercontent.com/43810248/173234869-3d7fc454-ddb0-4740-b196-e41ad09fb435.png)
