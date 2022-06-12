@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=sans-serif&display=swap');
+
+
+/*------------------------------------------------------- LOGO SUPERIOR RIGHT -------------------------------------------------------*/
+
+#logo {
+    position: absolute;
+    right: 3vw;
+    top: 3vh;
+
+    opacity: 0.85;
+}
+
+#logo img {
+    width: 10vw;
+    height: auto;
+}
+
+/*------------------------------------------------------- LOGO SUPERIOR RIGHT -------------------------------------------------------*/
+
+
+/*------------------------------------------------------- PROPIEDADES DE LOS INDICADORES -------------------------------------------------------*/
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    transition: all 300ms;
+}
+
+#todo{
+    transition: all 500ms;
+}
+
+.ui {
+    font-family: sans-serif;
+    position: absolute;
+    left: 10;
+    bottom: 10;
+    color: white;
+}
+
+#uinadando {
+    font-family: sans-serif;
+    position: absolute;
+    left: 10;
+    text-align: left;
+    bottom:20%;
+    color: white;
+    font-size: 1vh;
+}
+
+#uinadando {
+    font-family: sans-serif;
+    position: absolute;
+    left: 10;
+    text-align: left;
+    bottom:21.1%;
+    color: white;
+    font-size: 1vh;
+}
+
+#others {
+    font-family: sans-serif;
+    position: absolute;
+    left: 10;
+    text-align: left;
+    bottom:18.3%;
+    color: white;
+    font-size: 1vh;
+}
+
+#ox,#oxagua{
+    font-family: sans-serif;
+    position: absolute;
+    left: 10;
+    text-align: left;
+    bottom:14vh;
+    color: white;
+    font-size: 1vh;  
+}
+
+.oxigeno{
+    margin-right: 1.2vw;
+    font-family: sans-serif;
+    margin-top: .45vh;
+    width: 2.25vw;
+    height: 1vh;
+    background-color: rgba(0, 0, 0, 0.87);
+    color: white;
+    font-size: 1vh;
+    border-radius: .4vh;
+    padding: 0.9vh 0.8vh;
+}
+
+.oxigenoagua{
+    margin-right: 1.2vw;
+    font-family: sans-serif;
+    margin-top: .45vh;
+    width: 2.25vw;
+    height: 1vh;
+    background-color: rgba(0, 0, 0, 0.87);
+    color: white;
+    font-size: 1vh;
+    border-radius: .4vh;
+    padding: 0.9vh 0.8vh;
+}
+
+.uicoche {
+    font-family: sans-serif;
+    position: absolute;
+    left: 17%;
+    bottom: 2%;
+    color: white;
+}
+
+.health, .armour,.food ,.thirst,.stress{
+    margin-right: 1.2vw;
+    font-family: sans-serif;
+    margin-top: .45vh;
+    width: 2.25vw;
+    height: 1vh;
+    background-color: rgba(0, 0, 0, 0.87);
+    color: white;
+    font-size: 1vh;
+    border-radius: .4vh;
+    padding: 0.9vh 0.8vh;
+}
+
+/*------------------------------------------------------- PROPIEDADES DE LOS INDICADORES -------------------------------------------------------*/
+
+
+/*------------------------------------------------------- BARRAS CINEMATICAS -------------------------------------------------------*/
+
+#barras{
+    display: none;
+    transition: 1s all;
+}
+
+#barra1{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 10%;
+    background-color: black;
+    transition: 1s all;
+}
+
+#barra2{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 10%;
+    background-color: black;
+    transition: 1s all;
+}
+
+#todo{
+    display: block;
+    transition: 1s all;
+}
+
+/*------------------------------------------------------- BARRAS CINEMATICAS -------------------------------------------------------*/
