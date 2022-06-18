@@ -9,6 +9,7 @@ This script includes:
 * Compatible with the latest version of QBCore.
 * Vehicle mode
 * [Coming Soon] Stress System
+* [Coming Soon] Speedometer + belt included
 
 # Previews
 ### Complete interface
