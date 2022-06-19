@@ -1,15 +1,19 @@
-$(".marchas").fadeOut();
-$(".kmnumero").fadeOut();
-$(".kmtexto").fadeOut();
-$(".contenedoropciones").fadeOut();
-$(".barragasolina").fadeOut();
-$(".fuel-progress").fadeOut();
-$(".fuel-container").fadeOut();
-$("#gaso-icon").fadeOut();
-$(".porcentaje").fadeOut();
+(() => {
+    $(".marchas").fadeOut();
+    $(".kmnumero").fadeOut();
+    $(".kmtexto").fadeOut();
+    $(".contenedoropciones").fadeOut();
+    $(".barragasolina").fadeOut();
+    $(".fuel-progress").fadeOut();
+    $(".fuel-container").fadeOut();
+    $("#gaso-icon").fadeOut();
+    $(".porcentaje").fadeOut();
+    var selector = document.querySelector("#todo")
+    selector.style = "opacity:0.0;"
+});
 
-$(function(){
-    window.addEventListener("message", function(event){
+$(function () {
+    window.addEventListener("message", function (event) {
 
         if (event.data.pauseMenu == false) {
             var selector = document.querySelector("#todo")
@@ -36,8 +40,8 @@ $(function(){
             $("#stress-level").css("width", stress + "");
 
             var id = event.data.id;
-            $("#id-percent").html(""+id);
-            
+            $("#id-percent").html("" + id);
+
         } else {
             var selector = document.querySelector("#todo")
             selector.style = "opacity:0.0;"
@@ -87,7 +91,7 @@ $(function(){
 
         }
 
-        if (event.data.isinthewater == true ||event.data.isinthewater == 1 ) {
+        if (event.data.isinthewater == true || event.data.isinthewater == 1) {
 
             var selectorid = document.querySelector(".oxigeno")
             selectorid.style = "opacity:0.0;"
@@ -98,15 +102,15 @@ $(function(){
             var armour = event.data.armour;
             $("#armour-percent2").html(Math.round(armour) + "");
             $("#armour-level2").css("width", armour + "");
-    
+
             var health = event.data.health;
             $("#health-percent2").html(Math.round(health) + "");
             $("#health-level2").css("width", health + "");
-    
+
             var food = event.data.food;
             $("#food-percent2").html(Math.round(food) + "");
             $("#food-level2").css("width", food + "");
-    
+
             var thirst = event.data.thirst;
             $("#thirst-percent2").html(Math.round(thirst) + "");
             $("#thirst-level2").css("width", thirst + "");
@@ -115,8 +119,8 @@ $(function(){
             $("#oxigenoagua-percent").html(Math.round(oxigenoagua) + "");
             $("#oxigenoagua-level").css("width", oxigenoagua + "");
 
-            
-        }else{
+
+        } else {
 
             var oxigeno = event.data.oxigeno;
             $("#oxigeno-percent").html(Math.round(oxigeno) + "");
@@ -129,7 +133,7 @@ $(function(){
             selector1.style = "opacity:0.0;"
         }
 
-        if (event.data.isVIP == true ||event.data.isinthewater == 1 ) {
+        if (event.data.isVIP == true || event.data.isinthewater == 1) {
 
             var selectorid = document.querySelector(".oxigeno")
             selectorid.style = "opacity:0.0;"
@@ -140,15 +144,15 @@ $(function(){
             var armour = event.data.armour;
             $("#armour-percent2").html(Math.round(armour) + "");
             $("#armour-level2").css("width", armour + "");
-    
+
             var health = event.data.health;
             $("#health-percent2").html(Math.round(health) + "");
             $("#health-level2").css("width", health + "");
-    
+
             var food = event.data.food;
             $("#food-percent2").html(Math.round(food) + "");
             $("#food-level2").css("width", food + "");
-    
+
             var thirst = event.data.thirst;
             $("#thirst-percent2").html(Math.round(thirst) + "");
             $("#thirst-level2").css("width", thirst + "");
@@ -157,8 +161,8 @@ $(function(){
             $("#oxigenoagua-percent").html(Math.round(oxigenoagua) + "");
             $("#oxigenoagua-level").css("width", oxigenoagua + "");
 
-            
-        }else{
+
+        } else {
 
             var oxigeno = event.data.oxigeno;
             $("#oxigeno-percent").html(Math.round(oxigeno) + "");
@@ -171,40 +175,40 @@ $(function(){
             selector1.style = "opacity:0.0;"
         }
 
-        if ( event.data.quitarhud == true ) {
-            var selector  = document.querySelector("#All")
+        if (event.data.quitarhud == true) {
+            var selector = document.querySelector("#All")
             selector.style = "display:none;"
-            
+
         }
 
-        if ( event.data.ponerhud == true ) {
-            var selector  = document.querySelector("#All")
+        if (event.data.ponerhud == true) {
+            var selector = document.querySelector("#All")
             selector.style = "display:block;"
         }
 
-        if ( event.data.ponerbarras == true ) {
-            var selector  = document.querySelector("#barras")
+        if (event.data.ponerbarras == true) {
+            var selector = document.querySelector("#barras")
             selector.style = "display:block;"
-            var selector2  = document.querySelector("#All")
+            var selector2 = document.querySelector("#All")
             selector2.style = "display:none;"
         }
 
-        if ( event.data.quitarbarras == true ) {
-            var selector  = document.querySelector("#barras")
+        if (event.data.quitarbarras == true) {
+            var selector = document.querySelector("#barras")
             selector.style = "display:none;"
-            var selector2  = document.querySelector("#All")
+            var selector2 = document.querySelector("#All")
             selector2.style = "display:block;"
         }
 
-        
+
     })
 
 })
 
 
-$(function() {
+$(function () {
 
-    window.addEventListener('message', function(event) {
+    window.addEventListener('message', function (event) {
         const v = event.data;
 
         if (v.type === 'cinturon:toggle') {
@@ -225,35 +229,35 @@ $(function() {
                     `)
                 }
 
-                if (v.toggle === true) {val = '0'} else {val = '1'}
+                if (v.toggle === true) { val = '0' } else { val = '1' }
 
                 //$('#cinturon').css({'filter' : 'invert('+val+')'})
             }
         }
-        
+
 
         if (v.luces == 1) {
-            $('#faro').css({'color' : 'white', 'text-shadow' : '0 0 0 white'})
+            $('#faro').css({ 'color': 'white', 'text-shadow': '0 0 0 white' })
         };
-        
+
         if (v.luceslargas == 1) {
-            $('#faro').css({'color' : 'white', 'text-shadow' : '0 0 .4vw white'})
+            $('#faro').css({ 'color': 'white', 'text-shadow': '0 0 .4vw white' })
         };
-        
+
         if (v.luces == 0 && v.luceslargas == 0) {
-            $('#faro').css({'color' : '#928b94', 'text-shadow' : '0 0 0 white'})
+            $('#faro').css({ 'color': '#928b94', 'text-shadow': '0 0 0 white' })
         }
 
-        if (v.locked == 1){
-            $('#bloqueo').css({'color' : 'rgb(0, 235, 74)'});
-        }else if (v.locked == 2){
-            $('#bloqueo').css({'color' : 'rgb(235, 0, 51)'});
+        if (v.locked == 1) {
+            $('#bloqueo').css({ 'color': 'rgb(0, 235, 74)' });
+        } else if (v.locked == 2) {
+            $('#bloqueo').css({ 'color': 'rgb(235, 0, 51)' });
         }
 
-        if (v.damage <= 900){
-            $('#daño').css({'color' : 'rgb(235, 0, 51)'});
-        }else if (v.damage > 900){
-            $('#daño').css({'color' : '#928b94'});
+        if (v.damage <= 900) {
+            $('#daño').css({ 'color': 'rgb(235, 0, 51)' });
+        } else if (v.damage > 900) {
+            $('#daño').css({ 'color': '#928b94' });
         }
 
         if (v.type === 'carhud:update') {
