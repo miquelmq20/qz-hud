@@ -4,6 +4,11 @@ local stress = 0
 local config = Config
 local speedMultiplier = config.UseMPH and 2.23694 or 3.6
 local seatbeltIsOn = false
+local hasPlayerLoaded = false
+
+AddEventHandler('QBCore:Client:OnPlayerLoaded', function(player)
+    hasPlayerLoaded = true
+end)
 
 RegisterNetEvent('hud:client:UpdateNeeds')
 AddEventHandler('hud:client:UpdateNeeds', function(newHunger, newThirst)
@@ -14,6 +19,13 @@ end)
 RegisterNetEvent('hud:client:UpdateStress', function(newStress) -- Add this event with adding stress elsewhere
     stress = newStress
 end)
+
+function PauseMenuState()
+    if hasPlayerLoaded then
+        return IsPauseMenuActive()
+    end
+    return true
+end
 
 Citizen.CreateThread(function()
     while true do 
@@ -63,7 +75,7 @@ Citizen.CreateThread(function()
         end
 
         SendNUIMessage({
-            pauseMenu = IsPauseMenuActive();
+            pauseMenu = PauseMenuState();
             armour = GetPedArmour(PlayerPedId());
             health = GetEntityHealth(PlayerPedId())-100;
             food = hunger;
@@ -246,23 +258,12 @@ function SetSeatBeltActive(e)
     end
 end
 
-
-RegisterCommand('seatbelt', function()
-    local playerPed = GetPlayerPed(-1)
-    local vehicle = GetVehiclePedIsIn(playerPed)
-    local IsPedInAnyVehicle = IsPedInAnyVehicle(playerPed)
-
-    if (IsPedInAnyVehicle) then
-        seatbeltIsOn = not seatbeltIsOn
-        if (seatbeltIsOn) then
-            QBCore.Functions.Notify('Te has puesto el cinturón', "sucess",5000)
-        else
-            QBCore.Functions.Notify('Te has quitado el cinturón', "error",5000)
-        end
-        SetSeatBeltActive({active = seatbeltIsOn, checkIsVeh = IsPedInAnyVehicle})
-    end
+AddEventHandler("seatbelt:client:ToggleSeatbelt", function()
+    seatbeltIsOn = not seatbeltIsOn
+    SetSeatBeltActive({
+        active = seatbeltIsOn,
+        checkIsVeh = true,
+    })
 end)
-
-RegisterKeyMapping('seatbelt', 'Cinturon', 'KEYBOARD', 'G')
 
 ---------------------------------SPEEDOMETER---------------------------------
