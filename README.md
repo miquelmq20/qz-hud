@@ -14,7 +14,9 @@ This script includes:
 
 # Previews
 ### Complete interface
-![withcarhud](https://user-images.githubusercontent.com/43810248/174491681-a238534b-e180-418e-8211-0c44e6829891.png)
+![Showcase](https://user-images.githubusercontent.com/43810248/174494937-0f21c912-1672-4e44-aafb-6df2e5d0871a.png)
+
+![withcarhud](https://user-images.githubusercontent.com/43810248/174494916-30d56756-44bc-4a1c-b669-c2f0e5ebddeb.png)
 
 ### Resorce Monitor
 ![Rendimiento](https://user-images.githubusercontent.com/43810248/173234918-81e8c8e6-15f5-42a5-afbd-9b3b4b8ed86d.png)
