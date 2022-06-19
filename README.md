@@ -8,12 +8,14 @@ This script includes:
 * Custom logo on the top right.
 * Compatible with the latest version of QBCore.
 * Vehicle mode
-* [Coming Soon] Stress System
-* [Coming Soon] Speedometer + belt included
+* Stress System
+* Speedometer + belt included
+
 
 # Previews
 ### Complete interface
 ![complete](https://user-images.githubusercontent.com/43810248/173234869-3d7fc454-ddb0-4740-b196-e41ad09fb435.png)
+![withcarhud](https://user-images.githubusercontent.com/43810248/174491681-a238534b-e180-418e-8211-0c44e6829891.png)
 
 ### Resorce Monitor
 ![Rendimiento](https://user-images.githubusercontent.com/43810248/173234918-81e8c8e6-15f5-42a5-afbd-9b3b4b8ed86d.png)
