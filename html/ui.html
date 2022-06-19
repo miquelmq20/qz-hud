@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <script src="script.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/fc96155a5f.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900&display=swap" id="font">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@18657a9/css/all.min.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div>
+            <div id="All">
+                <div id="todo">
+                <div id="logo"><img src="logo.png" alt=""></div>
+                <div class="ui" id="ui">
+                    <div class="health" style="margin-bottom: 0.6vh;">
+                        <p style="margin: 0; position: absolute; left: 0.5vw; line-height: 0.0; "><i class="fas fa-heart-broken" style="font-size: 1.2vh; margin-bottom: 5vh; color: rgb(255, 255, 255);"></i></p>
+                        <p style="margin: 0; position: absolute; left: 1.7vw; line-height: 1vh;" id="health-percent">nil</p>
+                        <div id="health-level"></div>
+                    </div>
+                    <div class="armour">
+                        <p style="margin: 0; position: absolute; left: 0.5vw; bottom: 1.05vh; line-height: 0.0;"><i class="fas fa-shield-alt" style="font-size: 1.2vh; margin-bottom: 9.49vh; color: rgb(255, 255, 255);"></i></p>
+                        <p style="margin: 0; position: absolute; left: 1.7vw; line-height: 1vh;" id="armour-percent">nil</p>
+                        <div id="armour-level"></div>
+                    </div>
+                    <div class="food">
+                        <p style="margin: 0; position: absolute; left: 0.5vw; line-height: 0.0;"><i class="fas fa-pizza-slice" style="font-size: 1.2vh; color: rgb(255, 255, 255); margin-top: 0vh;"></i></p>
+                        <p style="margin: 0; position: absolute; left: 1.7vw; line-height: 1vh;" id="food-percent">nil</p>
+                        <div id="food-level"></div>
+                    </div>
+                    <div class="thirst">
+                        <p style="margin: 0; position: absolute; left: 0.5vw; line-height: 1.0;"><i class="fas fa-tint" style="font-size: 1.2vh; color: rgb(255, 255, 255);"></i></p>
+                        <p style="margin: 0; position: absolute; left: 1.7vw; line-height: 1vh;" id="thirst-percent">nil</p>
+                        <div id="thirst-level"></div>
+                    </div>
+                    <div class="stress">
+                        <p style="margin: 0; position: absolute; left: 0.5vw; line-height: 1.0;"><i class="fas fa-brain" style="font-size: 1.2vh; color: rgb(255, 255, 255);"></i></p>
+                        <p style="margin: 0; position: absolute; left: 1.7vw; line-height: 1vh;" id="stress-percent">nil</p>
+                        <div id="stress-level"></div>
+                    </div>
+                </div>
+                <div id="ox">
+                    <div class="oxigeno">
+
+
+                        <p style="margin: 0; position: absolute; left: 0.5vw; line-height: 0.0; bottom: 4.1vh;" id="estilo"><i class="fas fa-running" style="font-size: 1.2vh; color: rgb(255, 255, 255); margin-bottom: 0px;"></i></p>
+
+                        <p style="margin: 0; position: absolute; left: 1.7vw; line-height: 1vh;" id="oxigeno-percent">nil</p>
+                        <div id="oxigeno-level"></div>
+
+                    </div>
+                </div>
+                <div id="oxagua">
+
+                    <div class="oxigenoagua">
+
+                        <p style="margin: 0; position: absolute; left: 0.5vw; line-height: 0.0; bottom: 4.1vh;" id="estilo"><i class="fas fa-swimmer" style="font-size: 1.2vh; color: rgb(255, 255, 255); margin-bottom: 0px;"></i></p>
+                        <p style="margin: 0; position: absolute; left: 1.7vw; line-height: 1vh;" id="oxigenoagua-percent">nil</p>
+                        <div id="oxigenoagua-level"></div>
+
+                    </div>
+                </div>
+            </div>
+    </div>
+        <div id="Barras">
+            <div id="barra1"></div>
+            <div id="barra2"></div>
+        </div>
+        <div class="todo">
+            <div class="contenedoropciones">
+            <!--<div class="contenedoropciones-left">
+            <div class="contenedoropciones-right">
+            <div class="contenedoropciones-bottom">-->
+               <i class="fa-light fa-lightbulb" id="faro"></i>
+               <!--<i class="fa-light fa-lock" id="bloqueo"></i>-->
+               <i class="fa-light fa-brake-warning" id="daño"></i>
+               <div class="cinturon">
+                  <img src="img/cinturon.png" id="cinturon">
+               </div>
+            </div>
+            <div class="kmnumero">666</div>
+            <div class="kmtexto">KM/H</div>
+            <div class="marchas">0</div>
+            </div>
+            <!--<div class="fuel-container">-->
+               <!--<div class="fuel-progress"></div>-->
+            <!--</div>-->
+            <div class="porcentaje"></div>
+            <i class="fa-solid fa-gas-pump" id="gaso-icon"></i>
+         </div>
+              <script src="./script.js" type="text/javascript"></script>
+    </body>
+</html>

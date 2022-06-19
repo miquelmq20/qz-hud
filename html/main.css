@@ -1,0 +1,346 @@
+@font-face {
+    font-family: coche1;
+    src: url(fonts/1.ttf);
+}
+
+/*------------------------------------------------------- LOGO SUPERIOR RIGHT -------------------------------------------------------*/
+
+#logo {
+    position: absolute;
+    right: 3vw;
+    top: 3vh;
+
+    opacity: 0.85;
+}
+
+#logo img {
+    width: 10vw;
+    height: auto;
+}
+
+/*------------------------------------------------------- LOGO SUPERIOR RIGHT -------------------------------------------------------*/
+
+
+/*------------------------------------------------------- PROPIEDADES DE LOS INDICADORES -------------------------------------------------------*/
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    transition: all 300ms;
+}
+
+#todo{
+    transition: all 500ms;
+}
+
+.ui {
+    font-family: sans-serif;
+    position: absolute;
+    left: 10;
+    bottom: 10;
+    color: white;
+}
+
+#uinadando {
+    font-family: sans-serif;
+    position: absolute;
+    left: 10;
+    text-align: left;
+    bottom:20%;
+    color: white;
+    font-size: 1vh;
+}
+
+#uinadando {
+    font-family: sans-serif;
+    position: absolute;
+    left: 10;
+    text-align: left;
+    bottom:21.1%;
+    color: white;
+    font-size: 1vh;
+}
+
+#others {
+    font-family: sans-serif;
+    position: absolute;
+    left: 10;
+    text-align: left;
+    bottom:18.3%;
+    color: white;
+    font-size: 1vh;
+}
+
+#ox,#oxagua{
+    font-family: sans-serif;
+    position: absolute;
+    left: 10;
+    text-align: left;
+    bottom:14vh;
+    color: white;
+    font-size: 1vh;  
+}
+
+.oxigeno{
+    margin-bottom: 3.4vh;
+    margin-right: 1.2vw;
+    font-family: sans-serif;
+    width: 2.25vw;
+    height: 1vh;
+    background-color: rgba(0, 0, 0, 0.87);
+    color: white;
+    font-size: 1vh;
+    border-radius: .4vh;
+    padding: 0.9vh 0.8vh;
+}
+
+.oxigenoagua{
+    margin-bottom: 3.4vh;
+    margin-right: 1.2vw;
+    font-family: sans-serif;
+    width: 2.25vw;
+    height: 1vh;
+    background-color: rgba(0, 0, 0, 0.87);
+    color: white;
+    font-size: 1vh;
+    border-radius: .4vh;
+    padding: 0.9vh 0.8vh;
+}
+
+.uicoche {
+    font-family: sans-serif;
+    position: absolute;
+    left: 17%;
+    bottom: 2%;
+    color: white;
+    float: left;
+}
+
+.health, .armour,.food ,.thirst,.stress{
+    margin-right: 1.2vw;
+    font-family: sans-serif;
+    margin-top: .45vh;
+    width: 2.25vw;
+    height: 1vh;
+    background-color: rgba(0, 0, 0, 0.87);
+    color: white;
+    font-size: 1vh;
+    border-radius: .4vh;
+    padding: 0.9vh 0.8vh;
+}
+
+/*------------------------------------------------------- PROPIEDADES DE LOS INDICADORES -------------------------------------------------------*/
+
+
+/*------------------------------------------------------- BARRAS CINEMATICAS -------------------------------------------------------*/
+
+#barras{
+    display: none;
+    transition: 1s all;
+}
+
+#barra1{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 10%;
+    background-color: black;
+    transition: 1s all;
+}
+
+#barra2{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 10%;
+    background-color: black;
+    transition: 1s all;
+}
+
+#todo{
+    display: block;
+    transition: 1s all;
+}
+
+/*------------------------------------------------------- BARRAS CINEMATICAS -------------------------------------------------------*/
+
+
+/*------------------------------------------------------- SPEEDOMETER -------------------------------------------------------*/
+
+.contenedoropciones{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3.5vw;
+    height: 100%;
+}
+
+#faro{
+    position: absolute;
+    top: 44.5vh;
+    transform: translateY(-50%);
+    font-size: 1.15vw;
+    color: #928b94;
+    transition: .2s;
+
+    background-color: rgba(0, 0, 0, 0.87) !important;
+    border-radius: 50%;
+    padding: .9vh;
+    width: 2vh;
+    height: 2vh;
+    text-align: center;
+    line-height: 2vh;
+
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 0.23vh solid rgba(255, 255, 255, 0.637);
+}
+
+
+#daño{
+    position: absolute;
+    top: 50vh;
+    transform: translateY(-50%);
+    font-size: 1.2vw;
+    color: #928b94;
+    transition: .2s;
+
+    background-color: rgba(0, 0, 0, 0.87);
+    border-radius: 50%;
+    padding: .9vh;
+    width: 3vh;
+    height: 3vh;
+    text-align: center;
+    line-height: 3vh;
+
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 0.23vh solid rgba(255, 255, 255, 0.637);
+}
+
+#cinturon{    
+    position: absolute;
+    top: 55.5vh;
+    transform: translateY(-50%);
+    width: 1.2vw;
+    /*filter: invert(1);*/
+
+    background-color: rgba(0, 0, 0, 0.87) !important;
+    border-radius: 50%;
+    padding: .9vh;
+    width: 2vh;
+    height: 2vh;
+    text-align: center;
+
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 0.23vh solid rgba(255, 255, 255, 0.637);
+}
+
+.kmnumero{
+    position: absolute;
+    bottom: .4vh;
+    font-size: 3vw;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+
+    font-weight: bold;
+
+    letter-spacing: .3vh;
+
+    text-align: center;
+
+    width: 100%;
+    font-family: coche1;
+}
+
+.kmtexto{
+    position: absolute;
+    bottom: 1.4vh;
+    left: 53.6vw;
+    color: white;
+    font-family: coche2;
+    font-size: .6vw;
+    color: white;
+    text-shadow: 0 0 10px rgb(0, 0, 0) !important;
+
+    letter-spacing: .1vh;
+
+    font-family: coche1;
+}
+
+.marchas{
+    position: absolute;
+    width: 1.2vw;
+    padding: .1vw;
+    bottom: 4.2vh;
+    left: 53.1vw;
+    text-align: center;
+    text-shadow: 0 0 10px rgb(0, 0, 0) !important;
+    border-radius: .25vw;
+    color: white;
+    font-size: 1.1vw;
+    font-weight: lighter;
+
+    font-family: coche1;
+}
+
+.porcentaje{
+    position: absolute;
+    right: 4vw;
+    bottom: 4.15vh;
+    font-family: sans-serif !important;
+    font-size: .7vw;
+    color: white;
+
+    padding: 1.07vh;
+    background-color: rgb(0, 0, 0);
+
+    font-family: coche1;
+
+    border-radius: .8vh;
+
+    border: 0.23vh solid rgba(255, 255, 255, 0.637);
+}
+
+[class="fa-solid fa-gas-pump"]{
+    position: absolute;
+    right: 1.5vw;
+    bottom: 4.19vh;
+    color: white;
+    font-size: .9vw;
+
+    padding: 1vh;
+    background-color: rgb(0, 0, 0);
+
+    border-radius: .8vh;
+
+    border: 0.23vh solid rgba(255, 255, 255, 0.637);
+}
+
+
+::-webkit-scrollbar {
+    width: 1px;
+  }
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+}
+
+/*------------------------------------------------------- SPEEDOMETER -------------------------------------------------------*/
