@@ -1,5 +1,5 @@
 # qb-clean-hud
-A hud with a clean interface for QBCore. Inspired by InfamesRP HUD
+A hud with a clean interface for QBCore
 
 This script includes:
 
