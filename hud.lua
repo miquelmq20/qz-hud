@@ -133,7 +133,7 @@ Citizen.CreateThread(function()
 end)
 
 ---------------------------------ENGINE ON/OFF---------------------------------
-RegisterCommand('+engine', function()
+RegisterCommand('engine', function()
     local vehicle = GetVehiclePedIsIn(PlayerPedId(), false)
     if vehicle == 0 or GetPedInVehicleSeat(vehicle, -1) ~= PlayerPedId() then return end
     if GetIsVehicleEngineRunning(vehicle) then
@@ -143,9 +143,6 @@ RegisterCommand('+engine', function()
     end
     SetVehicleEngineOn(vehicle, not GetIsVehicleEngineRunning(vehicle), false, true)
 end)
-
-RegisterKeyMapping('+engine', 'Toggle Engine', 'keyboard', 'G')
-
 ---------------------------------ENGINE ON/OFF---------------------------------
 
 
