@@ -101,26 +101,26 @@ Citizen.CreateThread(function()
         })
 
 
-        RegisterCommand('ocultarhud',function()
+        RegisterCommand('hidehud',function()    -- Command for hiding the hud
             SendNUIMessage({
                 quitarhud = true
             })
         end)
 
-        RegisterCommand('mostrarhud',function()
+        RegisterCommand('showhud',function()    -- Command for showing the hud
             SendNUIMessage({
                 ponerhud = true
             })
         end)
 
-        RegisterCommand('mostrarbarras',function()
+        RegisterCommand('startcinematic',function()  -- Command to make black bars appear on the screen (21:9)
             DisplayHud(false)
             SendNUIMessage({
                 ponerbarras = true
             })
         end)
 
-        RegisterCommand('ocultarbarras',function()
+        RegisterCommand('stopcinematic',function()  -- Command to make black bars disappear on the screen (21:9)
             SendNUIMessage({
                 quitarbarras = true
             })
