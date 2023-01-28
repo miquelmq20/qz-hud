@@ -29,8 +29,8 @@ end
 
 Citizen.CreateThread(function()
     while true do 
-        local ped = GetPlayerPed(-1)
-        local MyPedVeh = GetVehiclePedIsIn(GetPlayerPed(-1),false)
+        local ped = PlayerPedId()
+        local MyPedVeh = GetVehiclePedIsIn(ped,false)
         local isinthewater = IsEntityInWater(ped)
         local isinthewaterswiming = IsPedSwimming(ped)
         local vehicle = GetVehiclePedIsIn(ped)
@@ -56,7 +56,6 @@ Citizen.CreateThread(function()
             gearLevel = GetVehicleCurrentGear(vehicle)
             healthCar = math.ceil(GetVehicleBodyHealth(vehicle) / 10)
             speedLevel = math.ceil(GetEntitySpeed(vehicle) * 3.6)
-            --sleepThread = 170
         else
             fuelLevel  = 0
             gearLevel  = 0
@@ -76,8 +75,8 @@ Citizen.CreateThread(function()
 
         SendNUIMessage({
             pauseMenu = PauseMenuState();
-            armour = GetPedArmour(PlayerPedId());
-            health = GetEntityHealth(PlayerPedId())-100;
+            armour = GetPedArmour(ped);
+            health = GetEntityHealth(ped)-100;
             food = hunger;
             thirst = thirst;
             stress = stress;
@@ -89,7 +88,7 @@ Citizen.CreateThread(function()
             oxigeno = 100-GetPlayerSprintStaminaRemaining(PlayerId());
 
             type = 'carhud:update';
-            isInVehicle = IsPedInAnyVehicle;
+            isInVehicle = IsPedInAnyVehicle(ped,true);
             speed = speedLevel;
             fuel = fuelLevel;
             gear = gearLevel;
