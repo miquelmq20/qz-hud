@@ -55,7 +55,7 @@ Citizen.CreateThread(function()
             fuelLevel = GetVehicleFuelLevel(vehicle)
             gearLevel = GetVehicleCurrentGear(vehicle)
             healthCar = math.ceil(GetVehicleBodyHealth(vehicle) / 10)
-            speedLevel = math.ceil(GetEntitySpeed(vehicle) * 3.6)
+            speedLevel = math.ceil(GetEntitySpeed(vehicle) * speedMultiplier)
             --sleepThread = 170
         else
             fuelLevel  = 0
@@ -87,7 +87,7 @@ Citizen.CreateThread(function()
             isinthewaterswiming = IsPedSwimming(ped);
             oxigenoagua = GetPlayerUnderwaterTimeRemaining(PlayerId())*10;
             oxigeno = 100-GetPlayerSprintStaminaRemaining(PlayerId());
-
+	
             type = 'carhud:update';
             isInVehicle = IsPedInAnyVehicle;
             speed = speedLevel;
@@ -98,6 +98,7 @@ Citizen.CreateThread(function()
             luceslargas = highbeamsOn;
             locked = GetVehicleDoorLockStatus(vehicle);
             damage = damage;
+	    speedMultiplier = speedMultiplier;
         })
 
 
